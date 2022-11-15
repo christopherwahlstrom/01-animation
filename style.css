@@ -46,3 +46,51 @@ Men idag använder vi flexbox eller grid!
 	top: 50%;
 	transform: translateY(-50%);
 } */
+
+
+.throw-container {
+	width: 20em;
+	height: 12em;
+	border: 1px solid black;
+	position: relative;
+}
+.ball {
+	width: 2em;
+	height: 2em;
+	background-color: pink;
+	border-radius: 9000em;
+	position: absolute;
+	left: 1em;
+	bottom: 0em;
+	/* transform: translate(1em, 10em); */
+	transition: transform 2s linear;
+}
+.ball.throw {
+	/* transform: translate(11em, 10em); */
+	animation: throw-x 1s linear forwards, throw-y 1s forwards;
+	/* transform: translateX(10em); */
+}
+/* TODO: byt ut ease-in och ease-out mot Bézierkurvor
+
+https: //cubic-bezier.com/#.25,.1,.25,.98
+*/
+@keyframes throw-x {
+	0% {
+		transform: translateX(0em);
+		/* animation-timing-function: linear; */
+	}
+	100% { transform: translateX(10em); }
+}
+@keyframes throw-y {
+	0% {
+		bottom: 0em;
+		animation-timing-function: ease-out;
+	}
+	50% {
+		bottom: 8em;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		bottom: 0em;
+	}
+}
