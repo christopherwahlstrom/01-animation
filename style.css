@@ -30,7 +30,19 @@ body {
 .speed .ease-in { transition-timing-function: ease-in; }
 .speed .ease-out { transition-timing-function: ease-out; }
 .speed .ease-in-out { transition-timing-function: ease-in-out; }
+.speed .bezier {
+	transition-timing-function:
+	cubic-bezier(.47, .29, .53, 1.58)
+	/* cubic-bezier(0.95, -1, .49, .65); */
+ }
 .speed:hover li {
 	background-color: #a4bd9d;
 	left: 10em;
 }
+/* CSS-hack: användes förr i tiden för att centrera vertikalt
+Men idag använder vi flexbox eller grid!
+.vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+} */
