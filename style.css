@@ -1,0 +1,36 @@
+body {
+	font-size: 130%;
+}
+.highlight {
+	background-color: #F7F8E0;
+	transition: background-color 2.5s;
+	padding: 1em;
+}
+
+.highlight:hover {
+	background-color: #F3E2A9;
+}
+
+.speed {
+	background-color: lightgreen;
+	border: 1px solid darkgreen;
+}
+.speed > li {
+	transition: background-color 2s, left 4s;
+	left: 0em;
+	background-color: #478C34;
+	margin: 0.3em;
+	position: relative;  /* absolute fixed relative sticky static */
+	display: block;
+	width: 10em;
+	padding: 0.5em;
+	border: 1px solid black;
+}
+.speed .linear { transition-timing-function: linear; }
+.speed .ease-in { transition-timing-function: ease-in; }
+.speed .ease-out { transition-timing-function: ease-out; }
+.speed .ease-in-out { transition-timing-function: ease-in-out; }
+.speed:hover li {
+	background-color: #a4bd9d;
+	left: 10em;
+}
